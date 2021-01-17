@@ -1,18 +1,19 @@
-// import { useEffect } from 'react';
-// import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { getIdToken } from '../../utils/storage';
 
 import * as Styles from './styles';
 
 const Private = ({ children }) => {
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const isUserLogged = getIdToken();
+  const isUserLogged = getIdToken();
 
-  // useEffect(() => {
-  //   if (!isUserLogged) router.push('/admin/login');
-  // }, [isUserLogged]);
+  useEffect(() => {
+    if (!isUserLogged) router.push('/signin');
+  }, [isUserLogged]);
 
-  // if (!isUserLogged) return null;
+  if (!isUserLogged) return null;
   console.log('');
   return (
     <Styles.Private>{children}</Styles.Private>

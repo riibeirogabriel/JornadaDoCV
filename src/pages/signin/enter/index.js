@@ -10,6 +10,7 @@ import Input from '../../../components/Input';
 import Form from '../../../components/Form';
 
 import API from '../../../api';
+import { setIdToken } from '../../../utils/storage';
 
 import { useSnackBarContext } from '../../../context/SnackBar';
 
@@ -24,7 +25,7 @@ const Login = () => {
 
     try {
       const result = await API.post('/auth', authCredentials);
-      console.log(result.data.idToken);
+      setIdToken(result.data.idToken);
     } catch (error) {
       if (error.message.includes(StatusCodes.UNAUTHORIZED.toString())) {
         const snackBarMessage = 'Usuário e/ou senha inválida. Confira se seus dados estão corretos e tente novamente';
