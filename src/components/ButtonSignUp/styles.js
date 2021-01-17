@@ -7,7 +7,7 @@ export const ButtonSignUp = styled.div`
     background-color: ${theme.color.white};
     background-image: ${color || theme.color.backgroundPrimary};
     border-radius: 32px;
-    height: 50px;
+    height: 56px;
     width: 100%;
     box-shadow: 2px 2px 10px #00000030;
     margin: ${theme.spacing.normal};
@@ -16,8 +16,8 @@ export const ButtonSignUp = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50px;
-      height: 50px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       background-color: ${theme.color.white};
       box-shadow: 2px 2px 10px #00000020;

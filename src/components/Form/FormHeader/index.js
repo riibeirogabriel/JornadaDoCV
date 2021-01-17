@@ -10,11 +10,11 @@ const FormHeader = ({ href = '/', width = 0, isSignIn = false }) => (
       <ArrowLeft />
     </LinkButton>
 
-    {isSignIn ? (
+    {isSignIn ? null : (
       <div className="progress-container">
         <div className="progress-content" />
       </div>
-    ) : null}
+    )}
 
   </Styles.FormHeader>
 );

@@ -2,10 +2,10 @@ import Layout from '../../layout/Public';
 
 import SingIn from '../../components/SignIn';
 
-const Login = () => (
+const SingInPage = () => (
   <Layout>
     <SingIn />
   </Layout>
 );
 
-export default Login;
+export default SingInPage;

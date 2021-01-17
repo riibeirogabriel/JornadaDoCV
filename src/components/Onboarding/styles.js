@@ -5,13 +5,18 @@ export const Onboarding = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
     width: 100%;
+    height: 100%;
 
     header {
-      display: flex;
-      justify-content: flex-end;
       width: 100%;
+      position: fixed;
+      display: flex;
+      top: 0;
+      right: 0;
+      justify-content: flex-end;
+      padding: ${theme.spacing.normal};
     }
 
     section {
@@ -21,8 +26,7 @@ export const Onboarding = styled.div`
       justify-content: center;
       width: 100%;
       height: 100%;
-
-      margin-bottom: 80px;
+      margin-bottom: ${theme.spacing.medium};
 
       & > svg {
         width: 100%;
@@ -57,7 +61,7 @@ export const Bullets = styled.div`
     justify-content: space-between;
     margin: ${theme.spacing.medium};
     position: fixed;
-    bottom: 50px;
+    bottom: 56px;
 
     & > div {
       width: ${theme.spacing.xsmall};

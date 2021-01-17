@@ -2,10 +2,15 @@ import styled, { css } from 'styled-components';
 
 export const FormHeader = styled.header`
   ${({ theme, width }) => css`
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: ${theme.spacing.medium};
+    padding: ${theme.spacing.normal};
 
     & > .progress-container {
       width: 128px;

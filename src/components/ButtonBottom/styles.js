@@ -5,6 +5,7 @@ export const ButtonBottom = styled.button`
     all: unset;
     display: flex;
     position: fixed;
+    align-items: center;
     width: ${`calc(100vw  - 2 * ${theme.spacing.normal})`};
     bottom: 0;
     left: 0;
