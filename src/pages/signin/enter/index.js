@@ -12,6 +12,7 @@ import Input from '../../../components/Input';
 import Form from '../../../components/Form';
 
 import API from '../../../api';
+import { setIdToken } from '../../../utils/storage';
 
 import { useSnackBarContext } from '../../../context/SnackBar';
 
@@ -25,7 +26,8 @@ const SingIn = () => {
     event.preventDefault();
     const authCredentials = { user, password };
     try {
-      await API.post('/auth', authCredentials);
+      const result = await API.post('/auth', authCredentials);
+      setIdToken(result.data.idToken);
     } catch (error) {
       if (error.message.includes(StatusCodes.UNAUTHORIZED.toString())) {
         const snackBarMessage = 'Usuário e/ou senha inválida. Confira se seus dados estão corretos e tente novamente';
