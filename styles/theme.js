@@ -22,6 +22,7 @@ export default {
   },
   color: {
     primary: '#7E22CE',
+    backgroundPrimary: 'linear-gradient(to right, #a469d7, #975acd, #8a4ac3, #7d3ab9, #7029af)',
     white: '#FFFFFF',
     black: '#48484A',
     gray: '#C0C0C0',

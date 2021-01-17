@@ -4,12 +4,13 @@ export const ButtonSignUp = styled.div`
   ${({ theme, color }) => css`
     display: flex;
     align-items: center;
-    background-color: ${color || theme.color.primary};
+    background-color: ${theme.color.white};
+    background-image: ${color || theme.color.backgroundPrimary};
     border-radius: 32px;
     height: 50px;
+    width: 100%;
     box-shadow: 2px 2px 10px #00000030;
-    margin: ${theme.spacing.xsmall};
-    margin-top: ${color ? theme.spacing.large : theme.spacing.normal};
+    margin: ${theme.spacing.normal};
 
     & > span {
       display: flex;

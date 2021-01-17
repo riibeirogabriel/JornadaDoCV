@@ -1,7 +1,7 @@
 import * as Styles from './styles';
 
-const Description = ({ children }) => (
-  <Styles.Description>
+const Description = ({ children, ...rest }) => (
+  <Styles.Description {...rest}>
     {children}
   </Styles.Description>
 );

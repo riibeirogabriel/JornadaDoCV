@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const ButtonBottom = styled.div`
+export const ButtonBottom = styled.button`
   ${({ theme }) => css`
     all: unset;
     display: flex;
@@ -10,7 +10,8 @@ export const ButtonBottom = styled.div`
     left: 0;
     padding: ${theme.spacing.normal};
     justify-content: space-between;
-    background-color: ${theme.color.primary};
+    background-color: ${theme.color.white};
+    background-image: ${theme.color.backgroundPrimary};
     color: ${theme.color.white};
 
     &.center {

@@ -1,7 +1,10 @@
 import * as Styles from './styles';
 
-const Input = ({ ...rest }) => (
-  <Styles.Input {...rest} />
+const Input = ({ label = '', ...rest }) => (
+  <Styles.Container>
+    <p>{label}</p>
+    <Styles.Input {...rest} />
+  </Styles.Container>
 );
 
 export default Input;

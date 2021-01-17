@@ -1,22 +1,30 @@
 import styled, { css } from 'styled-components';
 
-export const SignIn = styled.div`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Form = styled.form`
+export const Container = styled.div`
   ${({ theme }) => css`
-    margin: ${theme.spacing.normal} 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & > .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: ${theme.spacing.large};
+
+      & > p:nth-child(2) {
+        margin-bottom: ${theme.spacing.large};
+      }
+    }
   `}
 `;
 
 export const Footer = styled.div`
   ${({ theme }) => css`
     position: fixed;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
