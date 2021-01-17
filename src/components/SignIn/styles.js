@@ -14,8 +14,8 @@ export const Container = styled.div`
       align-items: center;
       margin-bottom: ${theme.spacing.large};
 
-      & > p:nth-child(2) {
-        margin-bottom: ${theme.spacing.large};
+      & > svg{
+        margin: ${theme.spacing.large} 0;
       }
     }
   `}

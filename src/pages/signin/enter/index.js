@@ -1,5 +1,6 @@
 import StatusCodes from 'http-status-codes';
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 
 import Layout from '../../../layout/Public';
 import LayoutWrapper from '../../../layout/Form';
@@ -17,6 +18,8 @@ import { setIdToken } from '../../../utils/storage';
 import { useSnackBarContext } from '../../../context/SnackBar';
 
 const SingIn = () => {
+  const router = useRouter();
+
   const { showSnackBar } = useSnackBarContext();
 
   const [user, setUser] = useState('');
@@ -28,6 +31,7 @@ const SingIn = () => {
     try {
       const result = await API.post('/auth', authCredentials);
       setIdToken(result.data.idToken);
+      router.push('/home');
     } catch (error) {
       if (error.message.includes(StatusCodes.UNAUTHORIZED.toString())) {
         const snackBarMessage = 'Usuário e/ou senha inválida. Confira se seus dados estão corretos e tente novamente';

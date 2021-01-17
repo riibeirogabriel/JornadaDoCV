@@ -1,4 +1,4 @@
-const Onboarding1 = () => (
+const Onboarding2 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="343" height="198.381" viewBox="0 0 343 198.381">
     <g id="Group_682" data-name="Group 682" transform="translate(0 0)">
       <ellipse id="Ellipse_63" data-name="Ellipse 63" cx="81.537" cy="4.217" rx="81.537" ry="4.217" transform="translate(0 189.946)" fill="#e6e6e6" />
@@ -51,4 +51,4 @@ const Onboarding1 = () => (
   </svg>
 );
 
-export default Onboarding1;
+export default Onboarding2;
