@@ -12,7 +12,7 @@ import ButtonSignUp from '../ButtonSignUp';
 const SignUp = () => {
   const router = useRouter();
 
-  const handleOnclick = () => router.push('/signup');
+  const handleOnclick = () => router.push('/signup/enter');
 
   return (
     <Styles.Container>

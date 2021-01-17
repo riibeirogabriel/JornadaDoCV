@@ -10,7 +10,13 @@ export const createUser = async (
 
 export default async (req, res) => {
   if (req.method === POST) {
-    await createUser(req.body.user, req.body.password);
+    try {
+      await createUser(req.body.user, req.body.password);
+    } catch (error) {
+      res.statusCode = StatusCodes.CONFLICT;
+      res.json({});
+      return;
+    }
 
     res.statusCode = StatusCodes.CREATED;
     res.json({});
