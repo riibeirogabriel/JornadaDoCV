@@ -14,7 +14,6 @@ const Private = ({ children }) => {
   }, [isUserLogged]);
 
   if (!isUserLogged) return null;
-  console.log('');
   return (
     <Styles.Private>{children}</Styles.Private>
   );

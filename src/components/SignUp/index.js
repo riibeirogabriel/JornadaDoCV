@@ -5,7 +5,6 @@ import Email from '../../assets/Email';
 import Logo from '../../assets/Logo';
 
 import LinkButton from '../LinkButton';
-import Title from '../Title';
 import Description from '../Description';
 import ButtonSignUp from '../ButtonSignUp';
 
@@ -19,7 +18,6 @@ const SignUp = () => {
 
       <div className="logo-container">
         <Logo />
-        <Title>Jornada do CV</Title>
         <Description>Cadastre seus dados para usufruir das nossas funcionalidades</Description>
       </div>
 

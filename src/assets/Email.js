@@ -1,4 +1,4 @@
-const ArrowRight = () => (
+const Email = () => (
   <svg width="24.58" height="19.664" viewBox="0 0 24.58 19.664" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="linear-gradient" x1="-0.116" x2="0.883" y2="-0.021" gradientUnits="objectBoundingBox">
@@ -11,4 +11,4 @@ const ArrowRight = () => (
 
 );
 
-export default ArrowRight;
+export default Email;

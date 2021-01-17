@@ -6,7 +6,6 @@ import Logo from '../../assets/Logo';
 import Email from '../../assets/Email';
 
 import LinkButton from '../LinkButton';
-import Title from '../Title';
 import Description from '../Description';
 import ButtonSignUp from '../ButtonSignUp';
 
@@ -20,7 +19,6 @@ const SignIn = () => {
 
       <div className="logo-container">
         <Logo />
-        <Title>Jornada do CV</Title>
         <Description>Acesse sua conta para usufruir das nossas funcionalidades</Description>
       </div>
 
