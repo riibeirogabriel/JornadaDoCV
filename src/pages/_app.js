@@ -4,6 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../../styles/global';
 import theme from '../../styles/theme';
 
+import { SnackBarContextProvider } from '../context/SnackBar';
+
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
@@ -17,7 +19,9 @@ function MyApp({ Component, pageProps }) {
         <title>Jornada do CV</title>
       </Head>
 
-      <Component {...pageProps} />
+      <SnackBarContextProvider>
+        <Component {...pageProps} />
+      </SnackBarContextProvider>
       <GlobalStyle />
     </ThemeProvider>
   );

@@ -1,5 +1,5 @@
-import StatusCodes from 'http-status-codes';
 import React, { useState } from 'react';
+import StatusCodes from 'http-status-codes';
 import Layout from '../../../layout/Public';
 
 import FormHeader from '../../../components/Form/FormHeader';
@@ -8,9 +8,7 @@ import Title from '../../../components/Title';
 import Description from '../../../components/Description';
 import Input from '../../../components/Input';
 import Form from '../../../components/Form';
-
 import API from '../../../api';
-
 import { useSnackBarContext } from '../../../context/SnackBar';
 
 const Login = () => {
@@ -23,28 +21,28 @@ const Login = () => {
     const authCredentials = { user, password };
 
     try {
-      const result = await API.post('/auth', authCredentials);
-      console.log(result.data.idToken);
+      const result = await API.post('/user', authCredentials);
+      console.log(result.data);
     } catch (error) {
-      if (error.message.includes(StatusCodes.UNAUTHORIZED.toString())) {
-        const snackBarMessage = 'Usuário e/ou senha inválida. Confira se seus dados estão corretos e tente novamente';
+      if (error.message.includes(StatusCodes.CONFLICT.toString())) {
+        const snackBarMessage = 'Usuário existente!';
         showSnackBar('warning', snackBarMessage);
 
         return;
       }
       const snackBarMessage = 'Algo não ocorreu como esperado! Tente novamente em instantes';
-      showSnackBar('error', snackBarMessage);
+      showSnackBar('warning', snackBarMessage);
     }
   };
 
   return (
     <Layout>
-      <FormHeader href="/signin" />
+      <FormHeader href="/signup" />
 
       <Title className="right">Seu acesso</Title>
       <Description className="right">Coloque os dados que você usará para acessar a ferramenta</Description>
 
-      <Form id="form-signin" onSubmit={handleOnSubmit}>
+      <Form id="form-signup" onSubmit={handleOnSubmit}>
         <Input
           label="Email"
           type="email"
@@ -61,7 +59,7 @@ const Login = () => {
         />
       </Form>
 
-      <ButtonBottom type="submit" form="form-signin" className="center">
+      <ButtonBottom type="submit" form="form-signup" className="center">
         <p>Entrar</p>
       </ButtonBottom>
 
