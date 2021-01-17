@@ -1,7 +1,7 @@
 import * as Styles from './styles';
 
-const Title = ({ children }) => (
-  <Styles.Title>
+const Title = ({ children, ...ref }) => (
+  <Styles.Title {...ref}>
     {children}
   </Styles.Title>
 );

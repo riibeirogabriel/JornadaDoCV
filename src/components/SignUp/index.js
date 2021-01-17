@@ -1,35 +1,40 @@
-import * as Styles from './styles';
+import { useRouter } from 'next/router';
+import * as Styles from '../SignIn/styles';
 
 import Email from '../../assets/Email';
-import Google from '../../assets/Google';
+import Logo from '../../assets/Logo';
 
 import LinkButton from '../LinkButton';
 import Title from '../Title';
 import Description from '../Description';
 import ButtonSignUp from '../ButtonSignUp';
 
-const SignUp = () => (
-  <Styles.SignUp>
+const SignUp = () => {
+  const router = useRouter();
 
-    <Title>Bem vindo!!</Title>
-    <Description>Cadastre seus dados para usufruir das nossas funcionalidades</Description>
+  const handleOnclick = () => router.push('/signup');
 
-    <ButtonSignUp color="white">
-      <span><Google /></span>
-      <p>Cadastrar com Google</p>
-    </ButtonSignUp>
+  return (
+    <Styles.Container>
 
-    <ButtonSignUp>
-      <span><Email /></span>
-      <p>Cadastrar com email</p>
-    </ButtonSignUp>
+      <div className="logo-container">
+        <Logo />
+        <Title>Jornada do CV</Title>
+        <Description>Cadastre seus dados para usufruir das nossas funcionalidades</Description>
+      </div>
 
-    <Styles.Footer>
-      Já tem uma conta?&nbsp;
-      <LinkButton href="/signin">Faça Login</LinkButton>
-    </Styles.Footer>
+      <ButtonSignUp onClick={handleOnclick}>
+        <span><Email /></span>
+        <p>Cadastrar com email</p>
+      </ButtonSignUp>
 
-  </Styles.SignUp>
-);
+      <Styles.Footer>
+        Já tem uma conta?&nbsp;
+        <LinkButton href="/signin">Faça Login</LinkButton>
+      </Styles.Footer>
+
+    </Styles.Container>
+  );
+};
 
 export default SignUp;

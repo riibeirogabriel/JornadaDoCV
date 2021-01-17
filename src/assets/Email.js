@@ -1,7 +1,14 @@
 const ArrowRight = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V17C2 17.7956 2.31607 18.5587 2.87868 19.1213C3.44129 19.6839 4.20435 20 5 20H19C19.7956 20 20.5587 19.6839 21.1213 19.1213C21.6839 18.5587 22 17.7956 22 17V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4V4ZM18.33 6L12 10.75L5.67 6H18.33ZM19 18H5C4.73478 18 4.48043 17.8946 4.29289 17.7071C4.10536 17.5196 4 17.2652 4 17V7.25L11.4 12.8C11.5731 12.9298 11.7836 13 12 13C12.2164 13 12.4269 12.9298 12.6 12.8L20 7.25V17C20 17.2652 19.8946 17.5196 19.7071 17.7071C19.5196 17.8946 19.2652 18 19 18Z" fill="#7E22CE" />
+  <svg width="24.58" height="19.664" viewBox="0 0 24.58 19.664" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="linear-gradient" x1="-0.116" x2="0.883" y2="-0.021" gradientUnits="objectBoundingBox">
+        <stop offset="0" stopColor="#803cbb" />
+        <stop offset="1" stopColor="#af77e0" />
+      </linearGradient>
+    </defs>
+    <path id="Icon_material-email" data-name="Icon material-email" d="M25.122,6H5.458A2.455,2.455,0,0,0,3.012,8.458L3,23.206a2.465,2.465,0,0,0,2.458,2.458H25.122a2.465,2.465,0,0,0,2.458-2.458V8.458A2.465,2.465,0,0,0,25.122,6Zm0,4.916L15.29,17.061,5.458,10.916V8.458L15.29,14.6l9.832-6.145Z" transform="translate(-3 -6)" fill="url(#linear-gradient)" />
   </svg>
+
 );
 
 export default ArrowRight;

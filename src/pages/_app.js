@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        <title>Nome</title>
+        <title>Jornada do CV</title>
       </Head>
 
       <Component {...pageProps} />

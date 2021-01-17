@@ -1,43 +1,39 @@
+import { useRouter } from 'next/router';
+
 import * as Styles from './styles';
 
-import Google from '../../assets/Google';
+import Logo from '../../assets/Logo';
+import Email from '../../assets/Email';
 
 import LinkButton from '../LinkButton';
 import Title from '../Title';
 import Description from '../Description';
-import Input from '../Input';
-import ButtonBottom from '../ButtonBottom';
 import ButtonSignUp from '../ButtonSignUp';
 
 const SignIn = () => {
-  const handleOnclick = () => console.log('aqui');
+  const router = useRouter();
+
+  const handleOnclick = () => router.push('/signin/enter');
 
   return (
-    <Styles.SignIn>
+    <Styles.Container>
 
-      <Title>Bem vindo!!</Title>
-      <Description>Acesse sua conta para usufruir das nossas funcionalidades</Description>
+      <div className="logo-container">
+        <Logo />
+        <Title>Jornada do CV</Title>
+        <Description>Acesse sua conta para usufruir das nossas funcionalidades</Description>
+      </div>
 
-      <ButtonSignUp color="white">
-        <span><Google /></span>
-        <p>Entrar com Google</p>
+      <ButtonSignUp onClick={handleOnclick}>
+        <span><Email /></span>
+        <p>Entrar com email</p>
       </ButtonSignUp>
-
-      <Styles.Form>
-        <Input placeholder="Usuário" />
-        <Input placeholder="Senha" type="password" />
-      </Styles.Form>
 
       <Styles.Footer>
         Não tem uma conta?&nbsp;
         <LinkButton href="/signup">Cadastre-se</LinkButton>
       </Styles.Footer>
-
-      <ButtonBottom className="center" onClick={handleOnclick}>
-        <p>Entrar</p>
-      </ButtonBottom>
-
-    </Styles.SignIn>
+    </Styles.Container>
   );
 };
 
