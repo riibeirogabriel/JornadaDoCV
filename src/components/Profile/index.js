@@ -21,6 +21,7 @@ const Profile = () => (
 
       <div className="card-container">
         <Card
+          id="search"
           title="A Busca"
           description="A busca de vagas dentro da sua área é o primeiro passo."
           width={20}
@@ -28,6 +29,7 @@ const Profile = () => (
         />
 
         <Card
+          id="opportunity"
           title="A Vaga"
           description="Avalie se a vaga é boa para você."
           width={20}
@@ -35,6 +37,7 @@ const Profile = () => (
         />
 
         <Card
+          id="skills"
           title="As Competências"
           description="Entenda o que você já sabe e o que você precisa saber."
           width={20}
@@ -42,6 +45,7 @@ const Profile = () => (
         />
 
         <Card
+          id="experiences"
           title="As Experiências"
           description="Experiências não são apenas trabalho de carteira assinada."
           width={20}

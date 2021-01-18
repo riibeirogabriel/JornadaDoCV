@@ -46,7 +46,7 @@ const SingIn = () => {
   return (
     <Layout>
       <LayoutWrapper>
-        <FormHeader href="/signin" isSignIn />
+        <FormHeader href="/signin" withoutProgress />
 
         <Title className="right">Seu acesso</Title>
         <Description className="right">Coloque os dados que você usará para acessar a ferramenta</Description>

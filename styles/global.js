@@ -22,6 +22,10 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale !important;
   }
 
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   ::-moz-selection { background: #7E22CE90; color: white; }
   ::selection { background: #7E22CE90; color: white; }
 `;
