@@ -1,5 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-array-index-key */
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+
 import * as Styles from './styles';
 
 import Layout from '../../layout/Public';
@@ -64,7 +67,24 @@ const journeyData = {
 };
 
 const Journey = ({ id }) => {
-  const handleOnclick = () => console.log('aqui');
+  const router = useRouter();
+
+  const [selected, setSelected] = useState([]);
+
+  const handleOnClickCheckbox = (answer) => {
+    const found = selected.find((value) => value === answer);
+    if (found) {
+      const filter = selected.filter((value) => value !== answer);
+      setSelected(filter);
+      return;
+    }
+    setSelected((value) => [...value, answer]);
+  };
+
+  const handleOnclick = () => {
+    if (selected.length > 3) router.push({ pathname: `/journey/response/${id}`, query: { status: 'success' } });
+    else router.push({ pathname: `/journey/response/${id}`, query: { status: 'incentive' } });
+  };
 
   return (
     <Layout>
@@ -80,7 +100,7 @@ const Journey = ({ id }) => {
           {journeyData[id]?.answers?.map((answer, index) => (
             <label className="checkbox-container" key={index}>
               {answer}
-              <input type="checkbox" />
+              <input type="checkbox" onClick={() => handleOnClickCheckbox(answer)} />
               <span className="checkmark" />
             </label>
           ))}
